@@ -4,7 +4,8 @@ require 'bundler/setup'
 require 'config/simple_cov_config'
 SimpleCovConfig.configure
 
-require 'rack/dev/mark/configurator'
+require 'rails'
+require 'rack_dev_mark_configurator'
 require 'dotenv'
 require 'awesome_print'
 require 'pry'

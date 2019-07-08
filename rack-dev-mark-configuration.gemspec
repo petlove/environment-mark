@@ -2,11 +2,11 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rack/dev/mark/configurator/version'
+require 'rack_dev_mark_configurator/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rack-dev-mark-configuration'
-  spec.version       = Rack::Dev::Mark::Configurator::VERSION
+  spec.name          = 'rack-dev-mark-configurator'
+  spec.version       = RackDevMarkConfigurator::VERSION
   spec.authors       = ['linqueta']
   spec.email         = ['tecnologia@petlove.com.br']
 
@@ -19,7 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.required_ruby_version = '>= 2.6.3'
 
-  spec.add_dependency 'rack-dev-mark', '~> 0.7.8'
+  spec.add_dependency 'rack-dev-mark', '>= 0.7.8'
+  spec.add_dependency 'rails', '>= 5.2.3'
 
   spec.add_development_dependency 'bundler', '~> 2.0.2'
   spec.add_development_dependency 'rake', '~> 10.0'

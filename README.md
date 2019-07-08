@@ -1,4 +1,4 @@
-# [Rack::Dev::Mark::Configuration](https://github.com/petlove/rack-dev-mark-configuration)
+# [Rack::Dev::Mark::Configurator](https://github.com/petlove/rack-dev-mark-configuration)
 
 Simple way to configure marker in Petlove Rails applications
 
@@ -7,12 +7,14 @@ Simple way to configure marker in Petlove Rails applications
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rack-dev-mark-configuration', github: 'petlove/rack-dev-mark-configuration'
+gem 'rack-dev-mark-configurator', github: 'petlove/rack-dev-mark-configurator'
 ```
 
 ## Usage
 
-Add this code bellow into _development.rb_ and _production.rb_:
+Add this code bellow into _application.rb_:
 ```ruby
-  RackDevMarkConfiguration.configure(config)
+  require 'rack_dev_mark_configurator'
+
+  RackDevMarkConfigurator.configure(config)
 ```
