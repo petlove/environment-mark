@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'rack/dev/mark/configurator'
+require 'irb'
+require 'dotenv'
+require 'awesome_print'
+require 'pry'
+
+Dotenv.load('.env.development')
+
+IRB.start(__FILE__)
