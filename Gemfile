@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rack-dev-mark'
 gem 'rails', '>= 5.2.3'
+gem "nokogiri", ">= 1.10.4"
 
 group :development, :test do
   gem 'awesome_print'
