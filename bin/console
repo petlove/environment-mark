@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'rack_dev_mark_configurator'
+require 'environment-mark'
 require 'irb'
 require 'dotenv'
 require 'awesome_print'
