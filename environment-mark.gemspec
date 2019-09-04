@@ -2,18 +2,18 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rack_dev_mark_configurator/version'
+require 'environment-mark/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rack-dev-mark-configurator'
-  spec.version       = RackDevMarkConfigurator::VERSION
+  spec.name          = 'environment-mark'
+  spec.version       = EnvironmentMark::VERSION
   spec.authors       = ['linqueta']
   spec.email         = ['tecnologia@petlove.com.br']
 
   spec.licenses      = ['MIT']
-  spec.summary       = 'Simple configurator for Rack Dev Mark'
-  spec.description   = 'Simple configurator for Rack Dev Mark'
-  spec.homepage      = 'https://github.com/petlove/aws-sqs-configurator'
+  spec.summary       = 'Environment marker for Petlove applications'
+  spec.description   = 'Environment marker for Petlove applications'
+  spec.homepage      = 'https://github.com/petlove/environment-mark'
 
   spec.files         = Dir['{lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
   spec.require_paths = ['lib']

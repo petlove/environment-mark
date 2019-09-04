@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'rack_dev_mark_configurator/version'
+require 'environment-mark/version'
 require 'rack-dev-mark'
 require 'rails'
 
-module RackDevMarkConfigurator
+module EnvironmentMark
   PRODUCTION_APP_ENV = 'production'
   STAGING_APP_ENV = 'staging'
   DEVELOPMENT_APP_ENV = 'development'

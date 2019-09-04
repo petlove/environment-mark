@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe RackDevMarkConfigurator do
+RSpec.describe EnvironmentMark do
   it 'has a version number' do
-    expect(RackDevMarkConfigurator::VERSION).not_to be nil
+    expect(EnvironmentMark::VERSION).not_to be nil
   end
 
   describe '#configure' do

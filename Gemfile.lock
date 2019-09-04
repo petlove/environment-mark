@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rack-dev-mark-configurator (0.1.0)
+    environment-mark (0.1.0)
       rack-dev-mark (>= 0.7.8)
       rails (>= 5.2.3)
 
@@ -197,11 +197,11 @@ DEPENDENCIES
   awesome_print
   bundler (~> 2.0.2)
   dotenv
+  environment-mark!
   hashdiff (>= 1.0.0.beta1, < 2.0.0)
   nokogiri (>= 1.10.4)
   pry
   rack-dev-mark
-  rack-dev-mark-configurator!
   rails (>= 5.2.3)
   rake (~> 10.0)
   rspec
