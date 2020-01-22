@@ -22,6 +22,34 @@ module EnvironmentMark
       @right_theme ||= [:title, Rack::DevMark::Theme::GithubForkRibbon.new(position: 'right')]
     end
 
+    def app_production?
+      environment?(PRODUCTION_APP_ENV)
+    end
+
+    def app_staging?
+      environment?(STAGING_APP_ENV)
+    end
+
+    def app_development?
+      environment?(DEVELOPMENT_APP_ENV)
+    end
+
+    def production?
+      Rails.env.production? && app_production?
+    end
+
+    def staging?
+      Rails.env.production? && app_staging?
+    end
+
+    def development?
+      Rails.env.production? && app_development?
+    end
+
+    def local?
+      Rails.env.development?
+    end
+
     private
 
     def turn_on!(config)
@@ -40,22 +68,6 @@ module EnvironmentMark
 
     def label!(config, label)
       config.rack_dev_mark.env = label
-    end
-
-    def production?
-      Rails.env.production? && environment?(PRODUCTION_APP_ENV)
-    end
-
-    def staging?
-      Rails.env.production? && environment?(STAGING_APP_ENV)
-    end
-
-    def development?
-      Rails.env.production? && environment?(DEVELOPMENT_APP_ENV)
-    end
-
-    def local?
-      Rails.env.development?
     end
 
     def environment?(expected)
