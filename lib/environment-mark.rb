@@ -9,7 +9,6 @@ module EnvironmentMark
   STAGING_APP_ENV = 'staging'
   DEVELOPMENT_APP_ENV = 'development'
   LOCAL_APP_ENV = 'local'
-  APP_ENV = ENV['APP_ENV']
 
   class << self
     def configure(config)
@@ -20,6 +19,10 @@ module EnvironmentMark
 
     def right_theme
       @right_theme ||= [:title, Rack::DevMark::Theme::GithubForkRibbon.new(position: 'right')]
+    end
+
+    def app_env
+      ENV['APP_ENV']
     end
 
     def app_production?
@@ -71,7 +74,7 @@ module EnvironmentMark
     end
 
     def environment?(expected)
-      APP_ENV == expected
+      app_env == expected
     end
 
     def env_label

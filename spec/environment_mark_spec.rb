@@ -9,7 +9,7 @@ RSpec.describe EnvironmentMark do
     let(:config) { OpenStruct.new(application: OpenStruct.new(config: nil)) }
     subject { described_class.configure(config) }
 
-    before { stub_const("#{described_class}::APP_ENV", app_env) }
+    before { allow(described_class).to receive(:app_env).and_return(app_env) }
     after { subject }
 
     context 'production' do
